@@ -63,7 +63,7 @@ void INTERFLOP_CHECKCANCELLATION_API(pre_init)(File *stream,
                                                void **context);
 
 struct interflop_backend_interface_t
-    INTERFLOP_CHECKCANCELLATION_API(init)(void **context);
+    INTERFLOP_CHECKCANCELLATION_API(init)(void *context);
 
 void INTERFLOP_CHECKCANCELLATION_API(add_double)(double a, double b,
                                                  double *res, void *context);
@@ -81,9 +81,6 @@ void INTERFLOP_CHECKCANCELLATION_API(div_double)(double a, double b,
                                                  double *res, void *context);
 void INTERFLOP_CHECKCANCELLATION_API(div_float)(float a, float b, float *res,
                                                 void *context);
-
-void INTERFLOP_CHECKCANCELLATION_API(cast_double_to_float)(double a, float *b,
-                                                           void *context);
 
 void INTERFLOP_CHECKCANCELLATION_API(fma_double)(double a, double b, double c,
                                                  double *res, void *context);
