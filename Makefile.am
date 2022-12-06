@@ -8,11 +8,11 @@ libinterflop_checkcancellation_la_SOURCES = \
 libinterflop_checkcancellation_la_CFLAGS = \
     -DBACKEND_HEADER="interflop_checkcancellation" \
     -I@INTERFLOP_STDLIB_PATH@/include/ \
-    -fno-stack-protector -fPIC
+    -fno-stack-protector
 libinterflop_checkcancellation_la_CXXFLAGS = \
     -DBACKEND_HEADER="interflop_checkcancellation" \
     -I@INTERFLOP_STDLIB_PATH@/include/ \
-    -fno-stack-protector -fPIC
+    -fno-stack-protector
 
 if WALL_CFLAGS
 libinterflop_checkcancellation_la_CFLAGS += -Wall -Wextra -Wno-varargs
