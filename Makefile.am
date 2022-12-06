@@ -21,3 +21,5 @@ if LINK_INTERFLOP_STDLIB
 libinterflop_checkcancellation_la_LIBADD = @INTERFLOP_STDLIB_PATH@/lib/libinterflop_stdlib.la
 endif
 libinterflop_checkcancellation_la_includedir = $(includedir)/
+
+libinterflop_checkcancellation_HEADERS = interflop_checkcancellation.h
