@@ -230,7 +230,7 @@ error_t parse_opt(int key, char *arg, struct argp_state *state) {
     }
     break;
   default:
-    break;
+    return ARGP_ERR_UNKNOWN;
   }
 }
 
@@ -266,9 +266,18 @@ INTERFLOP_CHECKCANCELLATION_API(init)(void *context) {
     interflop_fma_double : INTERFLOP_CHECKCANCELLATION_API(fma_double),
     interflop_enter_function : Null,
     interflop_exit_function : Null,
-    interflop_user_call : INTERFLOP_CHECKCANCELLATION_API(user_call),
+    interflop_user_call : Null,
     interflop_finalize : Null,
   };
 
   return interflop_backend_checkcancellation;
 }
+
+struct interflop_backend_interface_t interflop_init(void *context)
+    __attribute__((weak, alias("interflop_checkcancellation_init")));
+
+void interflop_pre_init(File *stream, interflop_panic_t panic, void **context)
+    __attribute__((weak, alias("interflop_checkcancellation_pre_init")));
+
+void interflop_CLI(int argc, char **argv, void *context)
+    __attribute__((weak, alias("interflop_checkcancellation_CLI")));
