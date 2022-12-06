@@ -1,4 +1,3 @@
-ACLOCAL_AMFLAGS=-I m4
 lib_LTLIBRARIES = libinterflop_checkcancellation.la
 
 libinterflop_checkcancellation_la_SOURCES = \
