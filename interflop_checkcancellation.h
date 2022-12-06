@@ -51,6 +51,7 @@ typedef struct checkcancellation_conf {
 
 typedef checkcancellation_conf_t checkcancellation_context_t;
 
+void INTERFLOP_CHECKCANCELLATION_API(CLI)(int argc, char **argv, void *context);
 void INTERFLOP_CHECKCANCELLATION_API(configure)(checkcancellation_conf_t mode,
                                                 void *context);
 void INTERFLOP_CHECKCANCELLATION_API(finalize)(void *context);
