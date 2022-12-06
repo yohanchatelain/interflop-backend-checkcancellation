@@ -200,7 +200,7 @@ static struct argp_option options[] = {
      "select cancellation threshold for binary64", 0},
     {0}};
 
-error_t parse_opt(int key, char *arg, struct argp_state *state) {
+static error_t parse_opt(int key, char *arg, struct argp_state *state) {
   checkcancellation_context_t *ctx =
       (checkcancellation_context_t *)state->input;
   int error = 0;
