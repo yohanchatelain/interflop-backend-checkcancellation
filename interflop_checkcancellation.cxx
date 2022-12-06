@@ -63,10 +63,10 @@ void ifcc_checkCancellation(const REAL &a, const REAL &b, const REAL &r);
 template <typename REAL> int ifcc_threshold(const REAL &a);
 
 template <> int ifcc_threshold(const float &a) {
-  return checkcancellation_conf.threshold_float;
+  return checkcancellation_conf.threshold_b32;
 }
 template <> int ifcc_threshold(const double &a) {
-  return checkcancellation_conf.threshold_double;
+  return checkcancellation_conf.threshold_b64;
 }
 
 template <typename REAL>
@@ -81,7 +81,7 @@ inline void ifcc_checkCancellation(const REAL &a, const REAL &b,
   const int cancelled = emax - er;
 
   if (cancelled >= ifcc_threshold(a)) {
-    ifcc_cancellationHandler(cancelled);
+    interflop_cancellationHandler(cancelled);
   }
 }
 
