@@ -2,7 +2,7 @@ ACLOCAL_AMFLAGS=-I m4
 lib_LTLIBRARIES = libinterflop_checkcancellation.la
 
 libinterflop_checkcancellation_la_SOURCES = \
-    interflop_check_float_max.cxx \
+    interflop_checkcancellation.cxx \
     @INTERFLOP_STDLIB_PATH@/include/interflop-stdlib/iostream/logger.c 
 
 libinterflop_checkcancellation_la_CFLAGS = \
