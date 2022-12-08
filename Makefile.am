@@ -14,7 +14,7 @@ libinterflop_checkcancellation_la_CXXFLAGS = \
     -fno-stack-protector
 
 if WALL_CFLAGS
-libinterflop_checkcancellation_la_CFLAGS += -Wall -Wextra -Wno-varargs
+libinterflop_checkcancellation_la_CFLAGS += -Wall -Wextra -Wno-varargs -Og -g
 endif
 if LINK_INTERFLOP_STDLIB
 libinterflop_checkcancellation_la_LIBADD = @INTERFLOP_STDLIB_PATH@/lib/libinterflop_stdlib.la
